@@ -2,7 +2,43 @@
 A script to test a range of 26 different forms of syntax on given Llama 2 based GGML files language models, to find working/optimal prompt syntax.
 
 ### OUTPUT:
-The example snippet with results 1-3 in "./data/output.log"... 
+The Main Display looks like this...
+=========================================================================================
+                                     Model-Syntax
+=========================================================================================
+
+
+ Defaults:
+
+     TEST_CONTENT = Hello Mr. Llama, nice to see you, care to shoot the breeze?!!
+      TEMPERATURE = 0.5
+   CONTEXT_LENGTH = 4096
+
+
+ Enter a CONTEXT_LENGTH or Blank for Default or 'exit' to Quit:
+
+ Enter a TEMPERATURE or Blank for Default or 'exit' to Quit:
+
+ Enter a TEST_CONTENT or Blank for Default or 'exit' to Quit:
+
+
+ Searching for Json...
+ Model Json Found.
+ Searching for models...
+ Model used: llama2_7b_chat_uncensored.ggmlv3.q2_K
+ Context used: 4096
+
+
+ Initialising, be patient...
+llama.cpp: loading model from ./models/llama2_7b_chat_uncensored.ggmlv3.q2_K.bin
+llama_model_load_internal: format     = ggjt v3 (latest)
+llama_model_load_internal: n_ctx      = 4096
+llama_model_load_internal: ftype      = 10 (mostly Q2_K)
+llama_model_load_internal: model size = 7B
+llama_model_load_internal: mem required  = 4525.64 MB (+ 1026.00 MB per state)
+
+```
+The results are saved to the "./data/output.log", here is a example snippet with results 1-3 of 26... 
 ```
 TEST CONTENT:
 "Hello Mr. Llama, nice to see you, care to shoot the breeze?!!"
