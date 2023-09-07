@@ -56,7 +56,7 @@ llama_model_load_internal: model size = 7B
 llama_model_load_internal: mem required  = 4525.64 MB (+ 1026.00 MB per state)
 
 ```
-The results are saved to the "./data/output.log", here is a example snippet with results 1-3 of 26... 
+The results are saved to the "./data/output.log", here's a snippet with 1-3 of 26... 
 ```TEST CONTENT:
 "Hello Mr. Llama, nice to see you, care to shoot the breeze?!!"
 
