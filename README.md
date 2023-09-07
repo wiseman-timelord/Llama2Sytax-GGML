@@ -3,6 +3,7 @@ A script to test a range of 26 different forms of syntax on given Llama 2 based 
 
 ### OUTPUT:
 The Main Display looks like this...
+```
 =========================================================================================
                                      Model-Syntax
 =========================================================================================
