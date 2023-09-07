@@ -3,8 +3,7 @@ A script to test a range of 26 different forms of syntax on given Llama 2 based 
 
 ### OUTPUT:
 The Main Display looks like this...
-```
-=========================================================================================
+```=========================================================================================
                                      Model-Syntax
 =========================================================================================
 
@@ -40,8 +39,7 @@ llama_model_load_internal: mem required  = 4525.64 MB (+ 1026.00 MB per state)
 
 ```
 The results are saved to the "./data/output.log", here is a example snippet with results 1-3 of 26... 
-```
-TEST CONTENT:
+```TEST CONTENT:
 "Hello Mr. Llama, nice to see you, care to shoot the breeze?!!"
 
 RESULT Method 1
