@@ -2,7 +2,7 @@
 A script to test a range of 26 different forms of syntax on given Llama 2 based GGML files language models, to find working/optimal prompt syntax.
 
 ### OUTPUT:
-The example snippet of "./data/output.log"... 
+The example snippet with results 1-3 in "./data/output.log"... 
 ```
 TEST CONTENT:
 "Hello Mr. Llama, nice to see you, care to shoot the breeze?!!"
