@@ -1,6 +1,7 @@
 # Llama2Syntax-GGML
 Status: Working.
 * The Llama2Syntax is a Python application designed to test 26 prompt formats with the Llama language model. It allows users to customize the test content, temperature, and context length for the model. The application log the model's responses, that can then be referenced against the inputs used in the input log, to find the optimal prompt(s) for your model, thus providing a comprehensive understanding of how the model interprets and responds to each. It's an essential tool for developers and researchers who are working with the Llama 2 model and want to understand its behavior better, especially for example, when a model card is missing details.
+* This script is also a dropin tool for my program "Llama2Robot", and uses the same, folders and logs.  
 
 ## Features
 1. **User Customization:** Allows users to input or modify configurations like `TEST_CONTENT`, `TEMPERATURE`, and `CONTEXT_LENGTH`.
