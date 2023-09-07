@@ -15,11 +15,11 @@ The Main Display looks like this...
    CONTEXT_LENGTH = 4096
 
 
- Enter a CONTEXT_LENGTH or Blank for Default or 'exit' to Quit:
+ Enter a TEST_CONTENT or Blank for Default or 'exit' to Quit:
 
  Enter a TEMPERATURE or Blank for Default or 'exit' to Quit:
 
- Enter a TEST_CONTENT or Blank for Default or 'exit' to Quit:
+ Enter a CONTEXT_LENGTH or Blank for Default or 'exit' to Quit:
 
 
  Searching for Json...
@@ -27,7 +27,6 @@ The Main Display looks like this...
  Searching for models...
  Model used: llama2_7b_chat_uncensored.ggmlv3.q2_K
  Context used: 4096
-
 
  Initialising, be patient...
 llama.cpp: loading model from ./models/llama2_7b_chat_uncensored.ggmlv3.q2_K.bin
