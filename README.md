@@ -1,4 +1,4 @@
-# Llama2Syntax
+# Llama2Syntax-GGML
 A script to test a range of 26 different forms of syntax on given Llama 2 based GGML files language models, to find working/optimal prompt syntax.
 
 ### OUTPUT:
