@@ -56,9 +56,9 @@ def get_user_configurations():
     else:
         TEST_CONTENT = prompt_size
 
-    TEMPERATURE = get_input("Enter a TEMPERATURE", TEMPERATURE_DEFAULT, float)
-    CONTEXT_LENGTH = get_input("Enter a CONTEXT_LENGTH", CONTEXT_LENGTH, int)
-    CORES = get_input("Enter number of cores to use", CORES_DEFAULT, int)
+    TEMPERATURE = get_input("Enter a TEMPERATURE or Blank for Default", TEMPERATURE_DEFAULT, float)
+    CONTEXT_LENGTH = get_input("Enter a CONTEXT_LENGTH or Blank for Default", CONTEXT_LENGTH, int)
+    CORES = get_input("Enter number of cores to use or Blank for Default", CORES_DEFAULT, int)
 
 
 # Search for config.json and .bin models
