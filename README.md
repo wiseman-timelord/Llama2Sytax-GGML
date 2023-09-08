@@ -27,33 +27,22 @@ The Main Display looks like this...
 =========================================================================================
 
 
- Defaults:
+                                       Defaults:
 
-     TEST_CONTENT = Hello Mr. Llama, nice to see you, care to shoot the breeze?!!
+
+ TEST_CONTENT_LARGE = Your name is Mr. Llama, your role is Chatbot to Human. You are at half-way up a mountain, where you and Human are present, and Human has just stated, Hello I though I'd go up the mountain for a while, fancy meeting you here, how are you doing today?, to you. Your task is, in one sentence, to respond to Humans's statement, in a method that are in context with, your emotional state being Indifferent, as well as the recent events are that, The conversation Started.
+
+ TEST_CONTENT_DEFAULT_SMALL = Hello Mr. Llama, nice to see you, care to shoot the breeze?!!
+
+
       TEMPERATURE = 0.5
    CONTEXT_LENGTH = 4096
+            CORES = 18
 
 
- Enter a TEST_CONTENT or Blank for Default or 'exit' to Quit:
-
- Enter a TEMPERATURE or Blank for Default or 'exit' to Quit:
-
- Enter a CONTEXT_LENGTH or Blank for Default or 'exit' to Quit:
+ Type prompt, or "large"/Blank for Large/Small Default or 'exit' to Quit:
 
 
- Searching for Json...
- Model Json Found.
- Searching for models...
- Model used: llama2_7b_chat_uncensored.ggmlv3.q2_K
- Context used: 4096
-
- Initialising, be patient...
-llama.cpp: loading model from ./models/llama2_7b_chat_uncensored.ggmlv3.q2_K.bin
-llama_model_load_internal: format     = ggjt v3 (latest)
-llama_model_load_internal: n_ctx      = 4096
-llama_model_load_internal: ftype      = 10 (mostly Q2_K)
-llama_model_load_internal: model size = 7B
-llama_model_load_internal: mem required  = 4525.64 MB (+ 1026.00 MB per state)
 
 ```
 The results are saved to the "./data/output.log", here's a snippet with 1-3 of 26... 
