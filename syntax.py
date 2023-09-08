@@ -97,8 +97,6 @@ def search_json_and_models():
 
     model_name = os.path.basename(MODEL_PATH).replace('.bin', '')
     print(f" Model used: {model_name}")
-    print(f" Context used: {CONTEXT_LENGTH}")
-
 
 
 # Initialize the model
