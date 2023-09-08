@@ -8,7 +8,7 @@ cls
 echo Launching Model-Syntax...
 echo.
 @echo on
-wsl python3 llama2syntax.py
+wsl python3 syntax.py
 @echo off
 echo.
 echo.
