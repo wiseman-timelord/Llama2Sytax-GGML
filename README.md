@@ -31,7 +31,7 @@ The Main Display looks like this...
 
 TEST_CONTENT_DEFAULT_SMALL = Hello Mr. Llama, nice to see you, care to shoot the breeze?!
 
-TEST_CONTENT_LARGE = Your name is Mr. Llama, your role is Chatbot to Human. You are at half-way up a mountain, where you and Human are present, and Human has just stated, Hello I though I'd go up the mountain for a while, fancy meeting you here, how are you doing today?, to you. Your task is, in one sentence, to respond to Humans's statement, in a method that are in context with, your emotional state being Indifferent, as well as the recent events are that, The conversation Started.
+TEST_CONTENT_LARGE = Your name is Mr. Llama, your role is Chatbot to Human. In the location of half-way up a mountain, you and Human, are present. Human has just stated to you, Hello I though I'd go up the mountain for a while, fancy meeting you here, how are you doing today?. Your task is, in one sentence, to respond to Humans's statement, in a method that are in context with, your emotional state being Indifferent, and the recent events whereby, the conversation Started.
 
 
       TEMPERATURE = 0.5
