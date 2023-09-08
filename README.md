@@ -27,22 +27,26 @@ The Main Display looks like this...
 =========================================================================================
 
 
-                                       Defaults:
-
+                                      Defaults:
 
  TEST_CONTENT_LARGE = Your name is Mr. Llama, your role is Chatbot to Human. You are at half-way up a mountain, where you and Human are present, and Human has just stated, Hello I though I'd go up the mountain for a while, fancy meeting you here, how are you doing today?, to you. Your task is, in one sentence, to respond to Humans's statement, in a method that are in context with, your emotional state being Indifferent, as well as the recent events are that, The conversation Started.
 
- TEST_CONTENT_DEFAULT_SMALL = Hello Mr. Llama, nice to see you, care to shoot the breeze?!!
-
+ TEST_CONTENT_DEFAULT_SMALL = Hello Mr. Llama, nice to see you, care to shoot the breeze?!
 
       TEMPERATURE = 0.5
    CONTEXT_LENGTH = 4096
             CORES = 18
 
 
- Type prompt, or "large"/Blank for Large/Small Default or 'exit' to Quit:
+ Type your message or "large"/Blank for Large/Small Default or 'exit' to Quit:
+large
 
+ Enter a TEMPERATURE or Blank for Default or 'exit' to Quit:
 
+ Enter a CONTEXT_LENGTH or Blank for Default or 'exit' to Quit:
+
+ Enter number of CORES to use or Blank for Default or 'exit' to Quit:
+20
 
 ```
 The results are saved to the "./data/output.log", here's a snippet with 1-3 of 26... 
