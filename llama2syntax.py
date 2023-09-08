@@ -2,10 +2,12 @@ from llama_cpp import Llama
 import os
 import glob
 import readline
+import multiprocessing
 
 # Globals
 llm = None
-TEST_CONTENT_DEFAULT = "Hello Mr. Llama, nice to see you, care to shoot the breeze?!!"
+TEST_CONTENT_LARGE = "Your name is Mr. Llama, your role is Chatbot to Human. You are at half-way up a mountain, where you and Human are present, and Human has just stated, Hello I though I'd go up the mountain for a while, fancy meeting you here, how are you doing today?, to you. Your task is, in one sentence, to respond to Humans's statement, in a method that are in context with, your emotional state being Indifferent, as well as the recent events are that, The conversation Started."
+TEST_CONTENT_DEFAULT_SMALL = "Hello Mr. Llama, nice to see you, care to shoot the breeze?!"
 TEMPERATURE_DEFAULT = 0.5
 CONTEXT_LENGTH = 4096
 OUTPUT_LOG_PATH = "./data/output.log"
@@ -13,7 +15,8 @@ INPUT_LOG_PATH = "./data/input.log"
 TEST_CONTENT = None  # Initialize as None
 TEMPERATURE = None  # Initialize as None
 MODEL_PATH = None  # Initialize as None
-
+CORES_DEFAULT = int(multiprocessing.cpu_count() * 0.75)  # 3/4 of total cores
+CORES = None  # Initialize as None
 
 # Main Display Function
 def main_display():
@@ -21,21 +24,22 @@ def main_display():
     print("=" * 89)
     print("                                     Llama2Syntax")
     print("=" * 89)
-    print("\n\n Defaults:")
-    print(f"\n     TEST_CONTENT = {TEST_CONTENT_DEFAULT}")
-    print(f"      TEMPERATURE = {TEMPERATURE_DEFAULT}")
-    print(f"   CONTEXT_LENGTH = {CONTEXT_LENGTH}\n")  # Corrected this line
-  
+    print("\n\n                                      Defaults:")
+    print(f"\n TEST_CONTENT_LARGE = {TEST_CONTENT_LARGE}")
+    print(f"\n TEST_CONTENT_DEFAULT_SMALL = {TEST_CONTENT_DEFAULT_SMALL}")
+    print(f"\n      TEMPERATURE = {TEMPERATURE_DEFAULT}")
+    print(f"   CONTEXT_LENGTH = {CONTEXT_LENGTH}")
+    print(f"            CORES = {CORES_DEFAULT}\n")
 
-# User input for TEST_CONTENT, TEMPERATURE, and CONTEXT_LENGTH
+# User input for TEST_CONTENT, TEMPERATURE, CONTEXT_LENGTH, and CORES
 def get_user_configurations():
-    global TEST_CONTENT, TEMPERATURE, CONTEXT_LENGTH
+    global TEST_CONTENT, TEMPERATURE, CONTEXT_LENGTH, CORES
 
     # Helper function to get user input
     def get_input(prompt, default, type_cast):
         while True:
-            print(f"\n{prompt} or Blank for Default or 'exit' to Quit:")
-            value = input().strip()  # Use input() as usual
+            print(f"\n{prompt} or 'exit' to Quit:")
+            value = input().strip()
             if value.lower() == 'exit':
                 exit()
             elif value == '':
@@ -46,9 +50,16 @@ def get_user_configurations():
                 except ValueError:
                     print(f"Invalid input. Please enter a {type_cast.__name__}.")
 
-    TEST_CONTENT = get_input(" Enter a TEST_CONTENT", TEST_CONTENT_DEFAULT, str)
-    TEMPERATURE = get_input(" Enter a TEMPERATURE", TEMPERATURE_DEFAULT, float)
-    CONTEXT_LENGTH = get_input(" Enter a CONTEXT_LENGTH", CONTEXT_LENGTH, int)
+    prompt_size = get_input(" Type your message or \"large\"/Blank for Large/Small Default", TEST_CONTENT_DEFAULT_SMALL, str).lower()
+    if prompt_size == 'large':
+        TEST_CONTENT = TEST_CONTENT_LARGE
+    else:
+        TEST_CONTENT = prompt_size
+
+    TEMPERATURE = get_input("Enter a TEMPERATURE", TEMPERATURE_DEFAULT, float)
+    CONTEXT_LENGTH = get_input("Enter a CONTEXT_LENGTH", CONTEXT_LENGTH, int)
+    CORES = get_input("Enter number of cores to use", CORES_DEFAULT, int)
+
 
 # Search for config.json and .bin models
 def search_json_and_models():
@@ -98,7 +109,7 @@ def initialize_model():
         model_path=MODEL_PATH,
         n_ctx=CONTEXT_LENGTH,
         embedding=True,
-        n_threads=1,
+        n_threads=20,
     )
 
 # Function to test different prompt formats
