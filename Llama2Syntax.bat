@@ -1,5 +1,5 @@
 @echo off
-mode 89,37
+mode 90,37
 con:cols=89 lines=200
 title Model-Syntax
 cls
