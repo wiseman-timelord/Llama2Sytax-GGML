@@ -16,7 +16,7 @@ Status: Working.
 ## Usage.
 1. Copy model ".bin" files into "./models" (folder includes config.json).
 1. Click the "Llama2Syntax" (or for linux run "python3 llama2syntax.py").
-2. Follow the prompts to customize the `TEST_CONTENT`, `TEMPERATURE`, and `CONTEXT_LENGTH`.
+2. Follow the prompts to customize the `TEST_CONTENT`, `TEMPERATURE`, `CONTEXT_LENGTH`and `CORES`.
 3. Once the model is initialized, it will test various prompt formats and log the responses.
 4. Check the, `./data/output.log` and `./data/input.log`, for results.
 
