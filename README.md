@@ -4,7 +4,7 @@
 
 ### Description::
 * The Llama2Syntax is a Python application designed to test 26 prompt formats with the Llama language model. It allows users to customize the test content, temperature, and context length for the model. The application log the model's responses, that can then be referenced against the inputs used in the input log, to find the optimal prompt(s) for your model.
-* The Llama2Syntax now additionally includes "variants.py", that are able to test multiple different formats a single prompt can be put in, for example, the prompt is working, but not working well, then ask GPT to re-wrtite the prompt you use in >=10 different ways, and paste each of them into the relevant lines in the script "variants.py", same kind of deal as the other one, but I think it lost model selection or something, but the variables are at the top, probably upgrade this at some point.
+* The Llama2Syntax now additionally includes "variants.py", that are able to test multiple different formats a single prompt can be put in, for example, the prompt is working, but not working well, then ask GPT to re-wrtite the prompt you use in >=10 different ways, and paste each of them into the relevant lines in the script "variants.py", same kind of deal as the other one, but I think it lost model selection or something, but the variables are at the top, probably upgrade this next time I use it.
 
 
 ## Features
