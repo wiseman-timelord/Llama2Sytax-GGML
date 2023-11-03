@@ -1,5 +1,6 @@
 # Llama2Syntax-GGML
-### Status - Working:
+## Status:
+Working(ish). The batches for this program may only run on Windows 10 due to the different PowerShell launch commands required for various OS versions, that microsoft have bizarly chosen to use for each OS, and may cause endless launch loop on other systems.
 * These scripts are NOT polished, but they get the job done, and may also be used as a dropin tool for my other program "Llama2Robot", and uses the same, model folders and log files, however, if you do this, then watch out you do not over-write the,  "requirements.txt" and "Win Install.bat", files, so install before you drop them in. You will be amazed, at how a model does interperate the prompts, just with a few words switched around here and there, logic only applies so much, its more how the model is constructed, but, whatever, dont waste time trying individual prompts thinking you know how its going to work, and use this instead.
 
 ### Description::
