@@ -92,5 +92,5 @@ Result:
 - Llama 2 model files in GGML `.bin`
 - WSL (for windows users)
 
-### DISCLAIMER
-Read "Licence.Txt", its, what its there for and why its supplied with the package.
+## DISCLAIMER
+The "License.Txt" covers, this and relating, stuff.
