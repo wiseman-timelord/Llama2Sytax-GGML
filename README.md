@@ -92,6 +92,5 @@ Result:
 - Llama 2 model files in GGML `.bin`
 - WSL (for windows users)
 
-## Disclaimer
-
-The Llama Model Syntax Tester is designed to provide a comprehensive testing environment for the Llama language model. While it does not modify or interfere with the model's operations, users should be aware that the responses are subject to the configurations and the specific model being used. Interpretation and use of the data should be done with an understanding of machine learning principles and the specific model's capabilities
+### DISCLAIMER
+Read "Licence.Txt", its, what its there for and why its supplied with the package.
