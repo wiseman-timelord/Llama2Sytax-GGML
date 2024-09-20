@@ -1,12 +1,9 @@
 # Llama2Syntax-GGML
-## Status:
-Working(ish). The batches for this program may only run on Windows 10 due to the different PowerShell launch commands required for various OS versions, that microsoft have bizarly chosen to use for each OS, and may cause endless launch loop on other systems.
-* These scripts are NOT polished, but they get the job done, and may also be used as a dropin tool for my other program "Llama2Robot", and uses the same, model folders and log files, however, if you do this, then watch out you do not over-write the,  "requirements.txt" and "Win Install.bat", files, so install before you drop them in. You will be amazed, at how a model does interperate the prompts, just with a few words switched around here and there, logic only applies so much, its more how the model is constructed, but, whatever, dont waste time trying individual prompts thinking you know how its going to work, and use this instead.
+Status: Working(ish). These scripts are my early code, and it needs updating, when I require this program to work with GGUF, I will do so, and polish it.
 
 ### Description::
 * The Llama2Syntax is a Python application designed to test 26 prompt formats with the Llama language model. It allows users to customize the test content, temperature, and context length for the model. The application log the model's responses, that can then be referenced against the inputs used in the input log, to find the optimal prompt(s) for your model.
 * The Llama2Syntax now additionally includes "variants.py", that are able to test multiple different formats a single prompt can be put in, for example, the prompt is working, but not working well, then ask GPT to re-wrtite the prompt you use in >=10 different ways, and paste each of them into the relevant lines in the script "variants.py", same kind of deal as the other one, but I think it lost model selection or something, but the variables are at the top, probably upgrade this next time I use it.
-
 
 ## Features
 1. **User Customization:** Allows users to input or modify configurations like `TEST_CONTENT`, `TEMPERATURE`, and `CONTEXT_LENGTH`.
